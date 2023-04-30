@@ -1,8 +1,10 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-module.exports = mongoose.model('Todo', {
-    text: {
-        type: String,
-        default: ''
-    }
+const todoSchema = new mongoose.Schema({
+  text: {
+    type: String,
+    default: ''
+  }
 });
+
+module.exports = mongoose.model('Todo', todoSchema);
