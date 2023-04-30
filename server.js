@@ -2,13 +2,23 @@
 var express = require('express');
 var app = express(); 						// create our app w/ express
 var mongoose = require('mongoose'); 				// mongoose for mongodb
-var port = process.env.PORT || 8080; 				// set the port 			// load the database config
+var port = process.env.PORT || 8080; 				// mongoose for mongodb
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 // configuration ===============================================================
-mongoose.connect(process.env.MONGODB_URL || console.log('Something is wrong with the database'));
+// Connect to MongoDB
+mongoose.Promise = global.Promise;
+var promise = mongoose.connect('mongodb://localhost:27017/node-todo', {
+  useMongoClient: true,
+});
+
+promise.then(function(db) {
+    console.log("Connected to database!!!");
+}, function(err){
+    console.log("Error in connecting database " + err);
+});
 
 app.use(express.static('./public')); 		// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); // log every request to the console
@@ -27,10 +37,4 @@ console.log("App listening on port " + port);
 
 
 
-
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mydatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
