@@ -1,11 +1,10 @@
 // set up ======================================================================
-var express = require('express');
-var app = express(); 						// create our app w/ express
-var mongoose = require('mongoose'); 				// mongoose for mongodb
-var port = process.env.PORT || 3000; 				// mongoose for mongodb
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+const express = require('express');
+const app = express(); 						// create our app w/ express
+const mongoose = require('mongoose'); 				// mongoose for mongod 				
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 // configuration ===============================================================
 // Connect to MongoDB
@@ -13,7 +12,7 @@ var methodOverride = require('method-override');
 
 
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://localhost:27017/node-todo', {
+const promise = mongoose.connect('mongodb://mongo:27017/node-todo', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -30,6 +29,8 @@ app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json({type: 'application/vnd.api+json'})); // parse application/vnd.api+json as json
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request
 
+
+const port = 3000;
 
 // routes ======================================================================
 require('./app/routes.js')(app);
