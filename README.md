@@ -1,11 +1,7 @@
 
 # Deploy Todo App built with Angular and MongoDB
 
-ลิงค์ Url ทีได้ http://13.210.159.209:3000/
-
-[![p2.png](https://i.postimg.cc/1zHY8nw3/p2.png)](https://postimg.cc/CZR4tKc3)
-
-
+## ลิงค์ Url ทีได้ http://13.210.159.209:3000/
 
 ## Installation and Edit code
 
@@ -72,5 +68,7 @@ services:
 ```console
 $ docker-compose up -d
 ```
+
+[![p2.png](https://i.postimg.cc/1zHY8nw3/p2.png)](https://postimg.cc/CZR4tKc3)
 
 
