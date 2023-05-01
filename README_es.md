@@ -17,7 +17,7 @@ MongoDB sera nuestra base de datos.
 2. Instalar la app: `npm install`
 3. Configurar su base de datos en `config/database.js`
 3. Inicie el servidor: `node server.js`
-4. Con su navegador, dirijase a `http://localhost:8080`
+4. Con su navegador, dirijase a `http://localhost:3000`
 
 ## Series de tutoriales que pueden ser interesantes o estar relacionados
 

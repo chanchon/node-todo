@@ -3,7 +3,7 @@ const Todo = require('./models/todo'); // Import Todo model
 function getTodos(req, res) {
     Todo.find(function (err, todos) {
         if (err) {
-            res.status(200).send(err);
+            res.status(404).send(err);
         } else {
             res.json(todos); // return all todos in JSON format
         }
@@ -17,7 +17,7 @@ module.exports = function (app) {
     app.get('/api/todos', function (req, res) {
         Todo.find(function (err, todos) {
             if (err) {
-                res.status(200).send(err);
+                res.status(404).send(err);
             } else {
                 res.json(todos);
             }
@@ -30,7 +30,7 @@ module.exports = function (app) {
             done: false
         }, function (err, todo) {
             if (err) {
-                res.status(200).send(err);
+                res.status(404).send(err);
             } else {
                 // respond with the new todo
                 res.json(todo);
@@ -43,12 +43,12 @@ module.exports = function (app) {
             _id: req.params.todo_id
         }, function (err, todo) {
             if (err) {
-                res.status(200).send(err);
+                res.status(404).send(err);
             } else {
                 // respond with the remaining todos
                 Todo.find(function (err, todos) {
                     if (err) {
-                        res.status(200).send(err);
+                        res.status(404).send(err);
                     } else {
                         res.json(todos);
                     }

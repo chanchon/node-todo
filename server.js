@@ -11,9 +11,8 @@ var methodOverride = require('method-override');
 // Connect to MongoDB
 mongoose.Promise = global.Promise;
 var promise = mongoose.connect('mongodb://localhost:27017/todo', {
-  useMongoClient: true,
+ 
 });
-
 promise.then(function(db) {
     console.log("Connected to database!!!");
 }, function(err){
