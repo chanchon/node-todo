@@ -3,7 +3,7 @@
 
 ลิงค์ Url ทีได้ http://13.210.159.209:3000/
 
-[![p2.png](https://i.postimg.cc/WzbVDchQ/p2.png)](https://postimg.cc/jw9m996X)
+[![p2.png](https://i.postimg.cc/1zHY8nw3/p2.png)](https://postimg.cc/CZR4tKc3)
 
 
 
