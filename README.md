@@ -1,7 +1,7 @@
 
 # Deploy Todo App built with Angular and MongoDB
 
-ลิงค์ Url สคริปต์ทีใช้ http://13.210.159.209:3000/
+ลิงค์ Url ทีได้ http://13.210.159.209:3000/
 
 
 
