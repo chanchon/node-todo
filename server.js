@@ -9,9 +9,13 @@ var methodOverride = require('method-override');
 
 // configuration ===============================================================
 // Connect to MongoDB
+
+
+
 mongoose.Promise = global.Promise;
-var promise = mongoose.connect('mongodb://localhost:27017/todo', {
- 
+var promise = mongoose.connect('mongodb://localhost:27017/node-todo', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
 promise.then(function(db) {
     console.log("Connected to database!!!");
