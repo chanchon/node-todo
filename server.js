@@ -9,10 +9,8 @@ const methodOverride = require('method-override');
 // configuration ===============================================================
 // Connect to MongoDB
 
-
-
 mongoose.Promise = global.Promise;
-const promise = mongoose.connect('mongodb://mongo:27017/node-todo', {
+const promise = mongoose.connect('mongodb://mongo:27017/node-todo', {  //mongodb://localhost:27017/todo
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
